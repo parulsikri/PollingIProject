@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Elective Choices</title>
+
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+  </head>
+  <body style="background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA0L3JtMjE4YmF0Y2g5LWF1bS0wNS1qb2I1OTguanBn.jpg')">
+    <img src ="iiitd.jpg" />
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center" style="color:Purple;">Elective Choices</h1>
+          <hr/>
+          <br/>
+          <div id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content" style="display: none;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" style="color:darkred;">SNo.</th>
+                  <th scope="col" style="color:darkred;">Course Name</th>
+                  <th scope="col" style="color:darkred;">Enrollments</th>
+                </tr>
+              </thead>
+              <tbody id="coursesResults" style="color:DarkBlue;">
+              </tbody>
+            </table>
+            <hr/>
+            <form onSubmit="App.castVote(); return false;">
+              <div class="form-group">
+                <label for="coursesSelect" style="color:darkred;">Select Course</label>
+                <select class="form-control" id="coursesSelect">
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary" style="background-color:green;">Enroll</button>
+              <hr />
+            </form>
+            <p id="accountAddress" class="text-center"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
